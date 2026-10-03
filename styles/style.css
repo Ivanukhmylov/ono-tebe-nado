@@ -82,16 +82,16 @@ a:hover {
 }
 
 /* ============================================================
-   HEADER — отступы 50px по краям
+   HEADER — логотип по центру, отступы 50px
    ============================================================ */
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 40px 50px;
   font-size: 14px;
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .header-nav {
@@ -99,6 +99,19 @@ a:hover {
   align-items: center;
   gap: 15px;
   flex-wrap: nowrap;
+}
+
+/* Логотип — строго по центру хедера */
+.header-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-logo img {
+  height: 105px;
+  display: block;
 }
 
 /* Точка-разделитель */
@@ -109,11 +122,6 @@ a:hover {
   background-color: #000;
   border-radius: 50%;
   flex-shrink: 0;
-}
-
-.header-logo img {
-  height: 105px;
-  display: block;
 }
 
 /* Контакты — адрес в 2 строки */
@@ -142,6 +150,11 @@ a:hover {
     text-align: center;
     padding: 40px 20px;
   }
+  /* На мобильных логотип возвращаем в поток */
+  .header-logo {
+    position: static;
+    transform: none;
+  }
   .header-contact {
     align-items: center;
     text-align: center;
@@ -159,7 +172,7 @@ a:hover {
 }
 
 /* ============================================================
-   HERO
+   HERO — на всю ширину экрана
    ============================================================ */
 .hero {
   position: relative;
@@ -167,8 +180,6 @@ a:hover {
   color: #ffffff;
   overflow: hidden;
   width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 .hero-bg {
@@ -307,12 +318,11 @@ a:hover {
 }
 
 /* ============================================================
-   LOTS — отступы 50px по краям
+   LOTS — на всю ширину, отступы 50px
    ============================================================ */
 .lots {
   padding: 80px 50px;
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .section-title {
@@ -406,15 +416,14 @@ a:hover {
 }
 
 /* ============================================================
-   ABOUT — отступы 50px по краям
+   ABOUT — на всю ширину, отступы 50px
    ============================================================ */
 .about {
   display: flex;
   justify-content: space-between;
   padding: 80px 50px;
   gap: 50px;
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .about-logo-wrapper {
@@ -467,7 +476,7 @@ a:hover {
 }
 
 /* ============================================================
-   FOOTER — отступы 50px по краям
+   FOOTER — на всю ширину, отступы 50px
    ============================================================ */
 .footer {
   display: flex;
@@ -475,11 +484,9 @@ a:hover {
   align-items: flex-start;
   padding: 60px 50px;
   font-size: 14px;
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 100%;
 }
 
-/* Контакты — адрес в 2 строки */
 .footer-contact {
   display: flex;
   flex-direction: column;
