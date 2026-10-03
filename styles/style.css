@@ -153,7 +153,7 @@ a:hover {
     padding: 40px 20px;
   }
   .header-logo {
-    position: static;
+    justify-self: center;
     transform: none;
   }
   .header-contact {
