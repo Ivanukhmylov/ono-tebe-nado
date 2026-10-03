@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ОНО ТЕБЕ НАДО</title>
+  <!-- Шрифты: только локальное подключение -->
+  <link rel="stylesheet" href="styles/fonts.css" />
   <link rel="stylesheet" href="styles/global.css" />
   <link rel="stylesheet" href="styles/style.css" />
 </head>
@@ -13,11 +15,17 @@
     <header class="site-header">
       <div class="container header-inner">
         <nav class="header-nav">
-          <a href="#" class="nav-link">главная</a>
-          <img src="images/55_100.svg" alt="dot" class="nav-dot" />
-          <a href="#section-lots" class="nav-link link-underline">посмотреть лоты</a>
-          <img src="images/55_96.svg" alt="dot" class="nav-dot" />
-          <a href="#section-about" class="nav-link link-underline">об аукционе</a>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#" class="header__link header__link_active">главная</a>
+            </li>
+            <li class="nav-item">
+              <a href="#section-lots" class="header__link">посмотреть лоты</a>
+            </li>
+            <li class="nav-item">
+              <a href="#section-about" class="header__link">об аукционе</a>
+            </li>
+          </ul>
         </nav>
         <div class="header-logo">
           <img src="images/55_88.svg" alt="ОНО ТЕБЕ НАДО" />
@@ -31,12 +39,10 @@
     </header>
   </section>
 
+  <!-- Hero: фоновое изображение через CSS -->
   <section id="section-hero">
-    <div class="hero-wrapper">
-      <div class="hero-bg">
-        <img src="images/0ebc4c3a92bfb672f477e421e7738fd6416ff19b.png" alt="Hero Background" />
-        <div class="hero-overlay"></div>
-      </div>
+    <div class="hero-wrapper lot-bg">
+      <div class="hero-overlay"></div>
       <div class="container hero-content">
         <div class="hero-title">
           <h1 class="word-1">ОНО</h1>
@@ -54,10 +60,10 @@
   <section id="section-lots">
     <div class="container lots-container">
       <h2 class="section-title">ЛОТЫ</h2>
-      <div class="lots-grid">
-
-        <div class="lot-card">
-          <img src="images/b6c1b9c4f9bad749215d12244cdd86581803c147.png" alt="Lot 1" class="lot-bg" />
+      <!-- Семантический список для карточек -->
+      <ul class="lots-grid">
+        <li class="lot-card">
+          <div class="lot-bg" style="background-image: url('images/b6c1b9c4f9bad749215d12244cdd86581803c147.png');"></div>
           <div class="lot-overlay"></div>
           <div class="lot-content">
             <h3 class="lot-title">Фильм режиссёра, который бросил киношколу</h3>
@@ -66,10 +72,10 @@
               если бы вы не знали, что режиссёр — Пол Томас Андерсон?
             </p>
           </div>
-        </div>
+        </li>
 
-        <div class="lot-card">
-          <img src="images/5643432f06853e92f2a26a4fdddcd6a380a702f7.png" alt="Lot 2" class="lot-bg" />
+        <li class="lot-card">
+          <div class="lot-bg" style="background-image: url('images/5643432f06853e92f2a26a4fdddcd6a380a702f7.png');"></div>
           <div class="lot-overlay"></div>
           <div class="lot-content">
             <h3 class="lot-title link-underline-white">
@@ -83,10 +89,10 @@
               бы вы поставили на «Улисса» Джеймса Джойса?
             </p>
           </div>
-        </div>
+        </li>
 
-        <div class="lot-card">
-          <img src="images/3543ee6f0852101f5ab31479457065d43c824f26.png" alt="Lot 3" class="lot-bg" />
+        <li class="lot-card">
+          <div class="lot-bg" style="background-image: url('images/3543ee6f0852101f5ab31479457065d43c824f26.png');"></div>
           <div class="lot-overlay"></div>
           <div class="lot-content">
             <h3 class="lot-title">
@@ -99,9 +105,8 @@
               из революционных работ Кандинского?
             </p>
           </div>
-        </div>
-
-      </div>
+        </li>
+      </ul>
       <a href="#" class="more-link link-underline">посмотреть больше</a>
     </div>
   </section>
@@ -146,9 +151,17 @@
           <span class="contact-address">наб. Принсенграхт 263-265, Амстердам</span>
         </div>
         <nav class="footer-nav">
-          <a href="#" class="nav-link">главная</a>
-          <a href="#section-lots" class="nav-link link-underline">посмотреть лоты</a>
-          <a href="#section-about" class="nav-link link-underline">об аукционе</a>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#" class="header__link header__link_active">главная</a>
+            </li>
+            <li class="nav-item">
+              <a href="#section-lots" class="header__link">посмотреть лоты</a>
+            </li>
+            <li class="nav-item">
+              <a href="#section-about" class="header__link">об аукционе</a>
+            </li>
+          </ul>
         </nav>
         <div class="footer-socials">
           <a href="#" class="social-link">
