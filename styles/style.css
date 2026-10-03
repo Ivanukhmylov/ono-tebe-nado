@@ -46,7 +46,6 @@ a:hover {
   opacity: 0.8;
 }
 
-/* Утилиты подчёркивания */
 .underline {
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -60,7 +59,6 @@ a:hover {
   text-decoration-color: #ffffff;
 }
 
-/* Ссылки навигации */
 .header__link {
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -74,7 +72,6 @@ a:hover {
   text-decoration: none;
 }
 
-/* Сброс стилей для списков */
 .nav-list,
 .lots-grid {
   list-style: none;
@@ -83,7 +80,7 @@ a:hover {
 }
 
 /* ============================================================
-   HEADER — контейнер 1100px, отступы 50px, логотип по центру
+   HEADER
    ============================================================ */
 .header {
   position: relative;
@@ -104,7 +101,6 @@ a:hover {
   flex-wrap: nowrap;
 }
 
-/* Точка-разделитель — 5×5 px, чёрная обводка, прозрачный фон */
 .nav-dot {
   display: inline-block;
   width: 5px;
@@ -115,7 +111,6 @@ a:hover {
   flex-shrink: 0;
 }
 
-/* Логотип — строго по центру хедера */
 .header-logo {
   position: absolute;
   left: 50%;
@@ -128,7 +123,6 @@ a:hover {
   display: block;
 }
 
-/* Контакты — адрес в 2 строки */
 .header-contact {
   display: flex;
   flex-direction: column;
@@ -175,7 +169,7 @@ a:hover {
 }
 
 /* ============================================================
-   HERO — контейнер 1100px
+   HERO
    ============================================================ */
 .hero {
   position: relative;
@@ -323,7 +317,7 @@ a:hover {
 }
 
 /* ============================================================
-   LOTS — контейнер 1100px, отступы 50px
+   LOTS
    ============================================================ */
 .lots {
   padding: 80px 50px;
@@ -370,7 +364,6 @@ a:hover {
   z-index: 1;
 }
 
-/* Текст внутри карточки — отступ 40px со всех сторон */
 .lot-content {
   position: relative;
   z-index: 2;
@@ -395,7 +388,6 @@ a:hover {
   margin: 0;
 }
 
-/* Ссылка «посмотреть больше» — отступ 40px слева и сверху */
 .more-link {
   font-size: 18px;
   display: inline-block;
@@ -433,8 +425,7 @@ a:hover {
 }
 
 /* ============================================================
-   ABOUT — отступы как на макете Figma
-   Логотип слева с отступом 47px, зазор 155px до текста
+   ABOUT — логотип поднят вверх
    ============================================================ */
 .about {
   display: flex;
@@ -448,6 +439,7 @@ a:hover {
 
 .about-logo-wrapper {
   flex-shrink: 0;
+  margin-top: -30px;
 }
 
 .merged-logo {
@@ -492,13 +484,16 @@ a:hover {
     gap: 40px;
     padding: 60px 20px;
   }
+  .about-logo-wrapper {
+    margin-top: 0;
+  }
   .about-content {
     max-width: 100%;
   }
 }
 
 /* ============================================================
-   FOOTER — grid: контакты | меню по центру | соцсети
+   FOOTER
    ============================================================ */
 .footer {
   display: grid;
@@ -511,7 +506,6 @@ a:hover {
   margin: 0 auto;
 }
 
-/* Контакты — слева */
 .footer-contact {
   display: flex;
   flex-direction: column;
@@ -529,7 +523,6 @@ a:hover {
   line-height: 1.4;
 }
 
-/* Меню — строго по центру */
 .footer-nav {
   display: flex;
   flex-direction: column;
@@ -553,12 +546,10 @@ a:hover {
   text-align: center;
 }
 
-/* Точки в футере не нужны */
 .footer-nav .nav-dot {
   display: none;
 }
 
-/* Соцсети — справа */
 .footer-socials {
   display: flex;
   gap: 48px;
