@@ -67,6 +67,7 @@ a:hover {
   text-decoration-thickness: 1px;
   color: inherit;
   white-space: nowrap;
+  display: inline-block;
 }
 
 .header__link_active {
@@ -543,6 +544,7 @@ a:hover {
 
 .footer-nav .nav-item {
   display: block;
+  text-align: center;
 }
 
 /* Точки в футере не нужны */
