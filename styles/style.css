@@ -1,4 +1,90 @@
-/* ===== HEADER ===== */
+/* ============================================================
+   ШРИФТЫ
+   ============================================================ */
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Regular.woff2') format('woff2'),
+       url('../fonts/Raleway-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
+       url('../fonts/Raleway-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================
+   БАЗА
+   ============================================================ */
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Утилиты подчёркивания */
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.underline-white {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: #ffffff;
+}
+
+/* Ссылки навигации */
+.header__link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  color: inherit;
+}
+
+.header__link_active {
+  text-decoration: none;
+}
+
+/* Сброс стилей для списков */
+.nav-list,
+.lots-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
 .header {
   display: flex;
   justify-content: space-between;
@@ -10,28 +96,14 @@
 .header-nav {
   display: flex;
   align-items: center;
-}
-
-.nav-list {
-  display: flex;
-  align-items: center;
   gap: 15px;
 }
 
-.nav-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-/* Точки-разделители между пунктами */
-.nav-item:not(:last-child)::after {
-  content: '';
-  display: inline-block;
+.nav-dot {
   width: 6px;
   height: 6px;
-  background-color: #000;
-  border-radius: 50%;
+  display: block;
+  flex-shrink: 0;
 }
 
 .header-logo img {
@@ -60,18 +132,18 @@
 }
 
 @media (max-width: 480px) {
-  .nav-list {
+  .header-nav {
+    flex-direction: column;
     gap: 10px;
   }
-  .nav-item {
-    gap: 10px;
-  }
-  .nav-item:not(:last-child)::after {
+  .nav-dot {
     display: none;
   }
 }
 
-/* ===== HERO ===== */
+/* ============================================================
+   HERO
+   ============================================================ */
 .hero {
   position: relative;
   height: 757px;
@@ -217,7 +289,9 @@
   }
 }
 
-/* ===== LOTS ===== */
+/* ============================================================
+   LOTS
+   ============================================================ */
 .lots {
   padding: 80px 20px;
 }
@@ -307,7 +381,9 @@
   }
 }
 
-/* ===== ABOUT ===== */
+/* ============================================================
+   ABOUT
+   ============================================================ */
 .about {
   display: flex;
   justify-content: space-between;
@@ -363,7 +439,9 @@
   }
 }
 
-/* ===== FOOTER ===== */
+/* ============================================================
+   FOOTER
+   ============================================================ */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -383,18 +461,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .footer-nav .nav-list {
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-}
-
-/* В футере точки не нужны */
-.footer-nav .nav-item:not(:last-child)::after {
-  display: none;
+  gap: 15px;
 }
 
 .footer-socials {
