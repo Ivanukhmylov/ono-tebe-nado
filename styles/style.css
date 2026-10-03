@@ -494,13 +494,12 @@ a:hover {
 }
 
 /* ============================================================
-   FOOTER — контейнер 1100px, отступы 50px
-   Меню вертикальное по центру
+   FOOTER — grid: контакты | меню по центру | соцсети
    ============================================================ */
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;   /* 3 колонки */
+  align-items: start;
   padding: 60px 50px;
   font-size: 14px;
   width: 100%;
@@ -508,11 +507,13 @@ a:hover {
   margin: 0 auto;
 }
 
+/* Контакты — слева */
 .footer-contact {
   display: flex;
   flex-direction: column;
   gap: 5px;
   max-width: 200px;
+  justify-self: start;
 }
 
 .footer-contact a {
@@ -524,12 +525,13 @@ a:hover {
   line-height: 1.4;
 }
 
-/* Меню в футере — вертикальное, по центру */
+/* Меню — строго по центру */
 .footer-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
+  justify-self: center;
 }
 
 .footer-nav .nav-list {
@@ -552,9 +554,11 @@ a:hover {
   display: none;
 }
 
+/* Соцсети — справа */
 .footer-socials {
   display: flex;
   gap: 48px;
+  justify-self: end;
 }
 
 .social-link img {
@@ -588,8 +592,7 @@ a:hover {
 
 @media (max-width: 768px) {
   .footer {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
     gap: 40px;
     text-align: center;
     padding: 60px 20px;
@@ -597,8 +600,10 @@ a:hover {
   .footer-contact {
     align-items: center;
     text-align: center;
+    justify-self: center;
   }
   .footer-socials {
     gap: 20px;
+    justify-self: center;
   }
 }
