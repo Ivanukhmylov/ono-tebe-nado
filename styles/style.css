@@ -317,7 +317,7 @@ a:hover {
 }
 
 /* ============================================================
-   LOTS
+   LOTS — gap между карточками 25px
    ============================================================ */
 .lots {
   padding: 80px 50px;
@@ -337,7 +337,7 @@ a:hover {
 .lots-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
+  gap: 25px;
   margin-bottom: 0;
 }
 
@@ -398,7 +398,7 @@ a:hover {
 @media (max-width: 992px) {
   .lots-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 20px;
   }
   .lots {
     padding: 80px 30px;
@@ -411,6 +411,7 @@ a:hover {
 @media (max-width: 768px) {
   .lots-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   .lot-card {
     height: auto;
@@ -425,7 +426,7 @@ a:hover {
 }
 
 /* ============================================================
-   ABOUT — секция с новыми классами
+   ABOUT — контейнер 1052px, логотип 240×240, gap 72px
    ============================================================ */
 #section-about {
   width: 100%;
@@ -479,14 +480,14 @@ a:hover {
 .about-column {
   flex-grow: 1;
   max-width: 693px;
-  margin-top: 98px; /* 133px (about-column y) - 35px (logo-column y) */
+  margin-top: 98px;
 }
 
 .about-title {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 0 100px 0; /* 150px (description y) - 47px (title height) - 3px (title y offset) */
+  margin: 0 0 100px 0;
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
@@ -504,13 +505,11 @@ a:hover {
   color: #000000;
 }
 
-/* Responsive Design */
 @media (max-width: 992px) {
   .about-container {
     padding-left: 20px;
     gap: 40px;
   }
-
   .about-column {
     margin-top: 40px;
   }
@@ -522,18 +521,15 @@ a:hover {
     align-items: center;
     padding-top: 20px;
   }
-
   .about-column {
     margin-top: 0;
     width: 100%;
   }
-
   .about-title {
     text-align: center;
     margin-bottom: 40px;
     font-size: 28px;
   }
-
   .description-text {
     font-size: 16px;
   }
