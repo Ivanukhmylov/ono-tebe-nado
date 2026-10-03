@@ -440,7 +440,7 @@ a:hover {
 .about-logo-wrapper {
   flex-shrink: 0;
   /* Сдвигаем логотип вниз, чтобы его центр совпал с центром заголовка */
-  margin-top: 93px;
+  margin-top: 35px;
 }
 
 .merged-logo {
