@@ -494,6 +494,7 @@ a:hover {
 
 /* ============================================================
    FOOTER — контейнер 1100px, отступы 50px
+   Меню вертикальное по центру
    ============================================================ */
 .footer {
   display: flex;
@@ -535,6 +536,13 @@ a:hover {
   flex-direction: column;
   align-items: center;
   gap: 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav .nav-item {
+  display: block;
 }
 
 /* Точки в футере не нужны */
