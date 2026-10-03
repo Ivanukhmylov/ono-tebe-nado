@@ -82,7 +82,7 @@ a:hover {
 }
 
 /* ============================================================
-   HEADER
+   HEADER — отступы 50px по краям
    ============================================================ */
 .header {
   display: flex;
@@ -90,6 +90,8 @@ a:hover {
   align-items: center;
   padding: 40px 50px;
   font-size: 14px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .header-nav {
@@ -305,11 +307,11 @@ a:hover {
 }
 
 /* ============================================================
-   LOTS
+   LOTS — отступы 50px по краям
    ============================================================ */
 .lots {
   padding: 80px 50px;
-  max-width: 1100px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -404,14 +406,14 @@ a:hover {
 }
 
 /* ============================================================
-   ABOUT
+   ABOUT — отступы 50px по краям
    ============================================================ */
 .about {
   display: flex;
   justify-content: space-between;
   padding: 80px 50px;
   gap: 50px;
-  max-width: 1100px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -465,7 +467,7 @@ a:hover {
 }
 
 /* ============================================================
-   FOOTER
+   FOOTER — отступы 50px по краям
    ============================================================ */
 .footer {
   display: flex;
@@ -473,6 +475,8 @@ a:hover {
   align-items: flex-start;
   padding: 60px 50px;
   font-size: 14px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /* Контакты — адрес в 2 строки */
