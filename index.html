@@ -7,37 +7,53 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- 1. Шрифты -->
+  <link rel="stylesheet" href="styles/fonts.css" />
+  <!-- 2. Глобальные стили -->
   <link rel="stylesheet" href="styles/global.css" />
+  <!-- 3. Локальные стили -->
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
 
-  <section id="section-header">
-    <header class="site-header">
-      <div class="container header-inner">
-        <nav class="header-nav">
-          <a href="#" class="nav-link">главная</a>
-          <img src="images/55_100.svg" alt="dot" class="nav-dot" />
-          <a href="#section-lots" class="nav-link link-underline">посмотреть лоты</a>
-          <img src="images/55_96.svg" alt="dot" class="nav-dot" />
-          <a href="#section-about" class="nav-link link-underline">об аукционе</a>
-        </nav>
-        <div class="header-logo">
-          <a href="#">
-            <img src="images/55_88.svg" alt="ОНО ТЕБЕ НАДО" />
-          </a>
-        </div>
-        <div class="header-contacts">
-          <a href="tel:+99995555555" class="contact-link link-underline">+9 999 555 5555</a>
-          <a href="mailto:info@sobaka.ge" class="contact-link link-underline">info@sobaka.ge</a>
-          <span class="contact-address">наб. Принсенграхт 263- 265, Амстердам</span>
-        </div>
-      </div>
-    </header>
-  </section>
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
 
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#" class="nav-link">главная</a>
+          </li>
+          <li class="nav-item">
+            <a href="#section-lots" class="nav-link link-underline">посмотреть лоты</a>
+          </li>
+          <li class="nav-item">
+            <a href="#section-about" class="nav-link link-underline">об аукционе</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-logo">
+        <a class="logo-link">
+          <img src="images/55_88.svg" alt="ОНО ТЕБЕ НАДО" />
+        </a>
+      </div>
+
+      <address class="header-contacts">
+        <a href="tel:+99995555555" class="contact-link link-underline">+9 999 555 5555</a>
+        <a href="mailto:info@sobaka.ge" class="contact-link link-underline">info@sobaka.ge</a>
+        <p class="contact-address">наб. Принсенграхт 263- 265, Амстердам</p>
+      </address>
+
+    </div>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
   <main>
 
+    <!-- Секция 1: Hero -->
     <section id="section-hero">
       <div class="hero-wrapper">
         <div class="hero-bg">
@@ -45,19 +61,18 @@
           <div class="hero-overlay"></div>
         </div>
         <div class="container hero-content">
-          <div class="hero-title">
-            <h1 class="word-1">ОНО</h1>
-            <h1 class="word-2">ТЕБЕ</h1>
-            <h1 class="word-3">НАДО</h1>
-          </div>
-          <div class="hero-footer">
-            <p class="hero-subline">Аукцион вещей, в которые никто не верил</p>
-            <a href="#" class="hero-button">Сделать ставку</a>
+          <div class="cover">
+            <h1 class="hero-title">ОНО ТЕБЕ НАДО</h1>
+            <div class="description">
+              <p class="hero-subline">Аукцион вещей, в которые никто не верил</p>
+              <a href="#" class="hero-button">Сделать ставку</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Секция 2: Лоты -->
     <section id="section-lots">
       <div class="container lots-container">
         <h2 class="section-title">ЛОТЫ</h2>
@@ -113,6 +128,7 @@
       </div>
     </section>
 
+    <!-- Секция 3: Об аукционе -->
     <section id="section-about">
       <div class="container about-inner">
         <div class="about-logo">
@@ -146,36 +162,47 @@
 
   </main>
 
-  <section id="section-footer">
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-contacts">
-          <a href="tel:+99995555555" class="contact-link link-underline">+9 999 555 5555</a>
-          <a href="mailto:info@sobaka.ge" class="contact-link link-underline">info@sobaka.ge</a>
-          <span class="contact-address">наб. Принсенграхт 263-265, Амстердам</span>
-        </div>
-        <nav class="footer-nav">
-          <a href="#" class="nav-link">главная</a>
-          <a href="#section-lots" class="nav-link link-underline">посмотреть лоты</a>
-          <a href="#section-about" class="nav-link link-underline">об аукционе</a>
-        </nav>
-        <div class="footer-socials">
-          <a href="#" class="social-link">
-            <div class="merged-social">
-              <img src="images/55_6.svg" alt="Circle" class="social-circle" />
-              <img src="images/55_7.svg" alt="YouTube" class="social-icon" />
-            </div>
-          </a>
-          <a href="#" class="social-link">
-            <img src="images/55_10.svg" alt="VK" />
-          </a>
-          <a href="#" class="social-link">
-            <img src="images/55_13.svg" alt="Pinterest" />
-          </a>
-        </div>
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <address class="footer-contacts">
+        <a href="tel:+99995555555" class="contact-link link-underline">+9 999 555 5555</a>
+        <a href="mailto:info@sobaka.ge" class="contact-link link-underline">info@sobaka.ge</a>
+        <p class="contact-address">наб. Принсенграхт 263-265, Амстердам</p>
+      </address>
+
+      <nav class="footer-nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#" class="nav-link">главная</a>
+          </li>
+          <li class="nav-item">
+            <a href="#section-lots" class="nav-link link-underline">посмотреть лоты</a>
+          </li>
+          <li class="nav-item">
+            <a href="#section-about" class="nav-link link-underline">об аукционе</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="footer-socials">
+        <a href="#" class="social-link">
+          <div class="merged-social">
+            <img src="images/55_6.svg" alt="Circle" class="social-circle" />
+            <img src="images/55_7.svg" alt="YouTube" class="social-icon" />
+          </div>
+        </a>
+        <a href="#" class="social-link">
+          <img src="images/55_10.svg" alt="VK" />
+        </a>
+        <a href="#" class="social-link">
+          <img src="images/55_13.svg" alt="Pinterest" />
+        </a>
       </div>
-    </footer>
-  </section>
+
+    </div>
+  </footer>
 
 </body>
 </html>
