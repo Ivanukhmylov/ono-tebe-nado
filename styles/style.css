@@ -434,13 +434,13 @@ a:hover {
 
 /* ============================================================
    ABOUT — отступы как на макете Figma
+   Логотип слева с отступом 47px, зазор 155px до текста
    ============================================================ */
 .about {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   gap: 155px;
-  padding: 155px 50px 80px 50px;
+  padding: 155px 50px 80px 47px;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
@@ -473,6 +473,7 @@ a:hover {
 }
 
 .about-content {
+  flex: 1;
   max-width: 693px;
 }
 
