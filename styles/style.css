@@ -425,75 +425,117 @@ a:hover {
 }
 
 /* ============================================================
-   ABOUT — логотип по центру относительно заголовка
+   ABOUT — секция с новыми классами
    ============================================================ */
-.about {
-  display: flex;
-  align-items: flex-start;
-  gap: 155px;
-  padding: 155px 50px 80px 47px;
+#section-about {
   width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
 }
 
-.about-logo-wrapper {
+.about-container {
+  width: 100%;
+  max-width: 1052px;
+  padding-top: 35px;
+  padding-left: 47px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 72px;
+}
+
+.logo-column {
+  width: 240px;
   flex-shrink: 0;
-  /* Сдвигаем логотип вниз, чтобы его центр совпал с центром заголовка */
-  margin-top: 35px;
 }
 
-.merged-logo {
+.logo-wrapper {
   position: relative;
   width: 240px;
   height: 240px;
 }
 
-.logo-circle {
+.logo-bg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 240px;
+  height: 240px;
+  z-index: 1;
 }
 
 .logo-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 64px;
+  left: 46.47px;
   width: 148px;
+  height: 114px;
+  z-index: 2;
 }
 
-.about-content {
-  flex: 1;
+.about-column {
+  flex-grow: 1;
   max-width: 693px;
+  margin-top: 98px; /* 133px (about-column y) - 35px (logo-column y) */
 }
 
-.about-content .section-title {
-  margin-top: 0;
+.about-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 100px 0; /* 150px (description y) - 47px (title height) - 3px (title y offset) */
+  line-height: 1.2;
+  letter-spacing: 0.02em;
 }
 
-.about-text p {
+.description-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.description-text {
   font-size: 18px;
   line-height: 1.6;
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin: 0;
+  color: #000000;
 }
 
+/* Responsive Design */
 @media (max-width: 992px) {
-  .about {
+  .about-container {
+    padding-left: 20px;
+    gap: 40px;
+  }
+
+  .about-column {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
     flex-direction: column;
     align-items: center;
+    padding-top: 20px;
+  }
+
+  .about-column {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .about-title {
     text-align: center;
-    gap: 40px;
-    padding: 60px 20px;
+    margin-bottom: 40px;
+    font-size: 28px;
   }
-  .about-logo-wrapper {
-    margin-bottom; 320;
-  }
-  .about-content {
-    max-width: 100%;
+
+  .description-text {
+    font-size: 16px;
   }
 }
 
