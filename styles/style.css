@@ -22,6 +22,10 @@
 /* ============================================================
    БАЗА
    ============================================================ */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   margin: 0;
@@ -30,12 +34,6 @@ body {
   color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 a {
@@ -68,6 +66,7 @@ a:hover {
   text-underline-offset: 4px;
   text-decoration-thickness: 1px;
   color: inherit;
+  white-space: nowrap;
 }
 
 .header__link_active {
@@ -89,7 +88,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 0;
+  padding: 40px 50px;
   font-size: 14px;
 }
 
@@ -97,12 +96,16 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 15px;
+  flex-wrap: nowrap;
 }
 
+/* Точка-разделитель */
 .nav-dot {
+  display: inline-block;
   width: 6px;
   height: 6px;
-  display: block;
+  background-color: #000;
+  border-radius: 50%;
   flex-shrink: 0;
 }
 
@@ -111,12 +114,23 @@ a:hover {
   display: block;
 }
 
+/* Контакты — адрес в 2 строки */
 .header-contact {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 5px;
   text-align: right;
+  max-width: 200px;
+}
+
+.header-contact a {
+  white-space: nowrap;
+}
+
+.header-contact span {
+  white-space: normal;
+  line-height: 1.4;
 }
 
 @media (max-width: 992px) {
@@ -124,6 +138,7 @@ a:hover {
     flex-direction: column;
     gap: 30px;
     text-align: center;
+    padding: 40px 20px;
   }
   .header-contact {
     align-items: center;
@@ -293,7 +308,9 @@ a:hover {
    LOTS
    ============================================================ */
 .lots {
-  padding: 80px 20px;
+  padding: 80px 50px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .section-title {
@@ -342,7 +359,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-sizing: border-box;
 }
 
 .lot-title {
@@ -369,6 +385,9 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+  .lots {
+    padding: 80px 30px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -379,6 +398,9 @@ a:hover {
     height: auto;
     min-height: 400px;
   }
+  .lots {
+    padding: 60px 20px;
+  }
 }
 
 /* ============================================================
@@ -387,8 +409,10 @@ a:hover {
 .about {
   display: flex;
   justify-content: space-between;
-  padding: 80px 20px;
+  padding: 80px 50px;
   gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .about-logo-wrapper {
@@ -433,6 +457,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 60px 20px;
   }
   .about-content {
     max-width: 100%;
@@ -446,15 +471,25 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 60px 20px;
+  padding: 60px 50px;
   font-size: 14px;
 }
 
+/* Контакты — адрес в 2 строки */
 .footer-contact {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  max-width: 260px;
+  max-width: 200px;
+}
+
+.footer-contact a {
+  white-space: nowrap;
+}
+
+.footer-contact span {
+  white-space: normal;
+  line-height: 1.4;
 }
 
 .footer-nav {
@@ -510,9 +545,11 @@ a:hover {
     align-items: center;
     gap: 40px;
     text-align: center;
+    padding: 60px 20px;
   }
   .footer-contact {
     align-items: center;
+    text-align: center;
   }
   .footer-socials {
     gap: 20px;
