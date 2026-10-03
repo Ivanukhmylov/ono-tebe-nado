@@ -121,7 +121,8 @@ a:hover {
   font-size: 115px;
   font-weight: 700;
   line-height: 1;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 .title-part {
   position: absolute;
@@ -149,16 +150,18 @@ a:hover {
   align-items: center;
 }
 .hero-subtitle {
-  font-size: 24px;
+  font-size: 18px;
   margin: 0;
   max-width: 600px;
+  text-transform: uppercase;
+  line-height: 1.4;
 }
 .btn-primary {
   background: transparent;
   border: 1px solid #ffffff;
   color: #ffffff;
   padding: 15px 40px;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   text-transform: uppercase;
   font-family: inherit;
@@ -213,7 +216,7 @@ a:hover {
     right: 20px;
   }
   .hero-subtitle {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
