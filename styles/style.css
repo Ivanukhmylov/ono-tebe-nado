@@ -11,338 +11,335 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 24px;
-  box-sizing: border-box;
+  padding: 0 20px;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  transition: opacity 0.2s ease;
 }
 
-h1,
-h2,
-h3,
-p {
-  margin: 0;
+a:hover {
+  opacity: 0.8;
 }
 
-.link-underline {
-  border-bottom: 1px solid #000000;
-  display: inline-block;
-  line-height: 1.2;
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
 }
 
-.link-underline-white {
-  border-bottom: 1px solid #ffffff;
-  display: inline;
+.underline-white {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: #ffffff;
 }
 
 /* ===== HEADER ===== */
-.site-header {
-  padding: 40px 0;
-}
-.header-inner {
+.header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  padding: 40px 0;
+  font-size: 14px;
 }
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 16px;
-  font-size: 14px;
-  text-transform: uppercase;
+  gap: 15px;
 }
 .nav-dot {
   width: 6px;
   height: 6px;
 }
 .header-logo img {
-  width: 148px;
-  height: auto;
+  height: 105px;
   display: block;
 }
-.header-contacts {
+.header-contact {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-  font-size: 14px;
-  max-width: 240px;
+  align-items: flex-end;
+  gap: 5px;
+  text-align: right;
 }
-.contact-address {
-  margin-top: 4px;
-  line-height: 1.4;
-}
-
-@media (max-width: 768px) {
-  .header-inner {
+@media (max-width: 992px) {
+  .header {
     flex-direction: column;
-    align-items: center;
-    gap: 32px;
+    gap: 30px;
+    text-align: center;
   }
-  .header-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .header-contacts {
+  .header-contact {
     align-items: center;
     text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .header-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-dot {
+    display: none;
   }
 }
 
 /* ===== HERO ===== */
-#section-hero {
+.hero {
   position: relative;
-  width: 100%;
-}
-
-.hero-wrapper {
-  position: relative;
-  width: 100%;
   height: 757px;
-  display: flex;
-  flex-direction: column;
+  color: #ffffff;
   overflow: hidden;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
-
 .hero-bg {
   position: absolute;
   inset: 0;
-  z-index: -2;
-  width: 100%;
-  height: 100%;
+  background-image: url('${ASSET_PATH}/0ebc4c3a92bfb672f477e421e7738fd6416ff19b.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
-
-.hero-bg img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
 .hero-overlay {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: -1;
+  z-index: 0;
 }
-
 .hero-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-top: 160px;
-  padding-bottom: 50px;
-  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  height: 100%;
 }
-
 .hero-title {
-  display: flex;
-  flex-direction: column;
+  margin: 0;
   font-size: 115px;
   font-weight: 700;
   line-height: 1;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
 }
-.word-1 {
-  align-self: flex-start;
+.title-part {
+  position: absolute;
 }
-.word-2 {
-  align-self: center;
+.part-1 {
+  top: 165px;
+  left: 50px;
 }
-.word-3 {
-  align-self: flex-end;
+.part-2 {
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
-.hero-footer {
+.part-3 {
+  top: 435px;
+  right: 50px;
+}
+.hero-bottom {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  right: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.hero-subline {
-  font-size: 18px;
-  text-transform: uppercase;
+.hero-subtitle {
+  font-size: 24px;
+  margin: 0;
   max-width: 600px;
-  line-height: 1.4;
 }
-.hero-button {
+.btn-primary {
+  background: transparent;
   border: 1px solid #ffffff;
-  padding: 14px 32px;
-  font-size: 16px;
+  color: #ffffff;
+  padding: 15px 40px;
+  font-size: 18px;
+  cursor: pointer;
   text-transform: uppercase;
+  font-family: inherit;
   transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+    background-color 0.3s,
+    color 0.3s;
 }
-.hero-button:hover {
+.btn-primary:hover {
   background-color: #ffffff;
   color: #000000;
 }
-
-@media (max-width: 768px) {
-  .hero-wrapper {
-    height: auto;
-    min-height: 600px;
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 80px;
   }
-  .hero-content {
-    padding-top: 80px;
-    padding-bottom: 40px;
-    gap: 60px;
+  .part-1 {
+    top: 100px;
+    left: 30px;
+  }
+  .part-2 {
+    top: 250px;
+  }
+  .part-3 {
+    top: 400px;
+    right: 30px;
+  }
+  .hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .hero {
+    height: 600px;
   }
   .hero-title {
-    font-size: 64px;
+    font-size: 60px;
   }
-  .hero-footer {
-    flex-direction: column;
-    gap: 24px;
-    text-align: center;
+  .part-1 {
+    top: 80px;
+    left: 20px;
+  }
+  .part-2 {
+    top: 200px;
+  }
+  .part-3 {
+    top: 320px;
+    right: 20px;
+  }
+  .hero-subtitle {
+    font-size: 18px;
   }
 }
 
 /* ===== LOTS ===== */
-.lots-container {
-  padding-top: 120px;
-  padding-bottom: 120px;
+.lots {
+  padding: 80px 20px;
 }
 .section-title {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 700;
-  text-transform: uppercase;
+  margin-top: 0;
   margin-bottom: 40px;
+  text-transform: uppercase;
 }
 .lots-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 49px;
+  gap: 50px;
   margin-bottom: 40px;
 }
 .lot-card {
   position: relative;
   height: 596px;
-  display: flex;
-  flex-direction: column;
   color: #ffffff;
   overflow: hidden;
 }
 .lot-bg {
-  display: block;
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: -2;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 .lot-overlay {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: -1;
+  z-index: 0;
 }
 .lot-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
   box-sizing: border-box;
 }
 .lot-title {
   font-size: 20px;
   font-weight: 700;
+  margin: 0;
   text-transform: uppercase;
-  line-height: 1.3;
+  line-height: 1.4;
+  display: inline;
 }
 .lot-desc {
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.5;
+  margin: 0;
 }
 .more-link {
-  font-size: 16px;
-  text-transform: uppercase;
+  font-size: 18px;
+  display: inline-block;
 }
-
 @media (max-width: 992px) {
   .lots-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 30px;
   }
 }
 @media (max-width: 768px) {
-  .lots-container {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
   .lots-grid {
     grid-template-columns: 1fr;
   }
   .lot-card {
-    height: 450px;
-  }
-  .lot-content {
-    padding: 24px;
+    height: auto;
+    min-height: 400px;
   }
 }
 
 /* ===== ABOUT ===== */
-.about-inner {
+.about {
   display: flex;
-  gap: 100px;
-  padding-bottom: 120px;
+  justify-content: space-between;
+  padding: 80px 20px;
+  gap: 50px;
 }
-.about-logo {
+.about-logo-wrapper {
   flex-shrink: 0;
-  width: 240px;
-  height: 240px;
 }
 .merged-logo {
   position: relative;
+  width: 240px;
+  height: 240px;
+}
+.logo-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
-.logo-circle,
 .logo-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.logo-circle {
-  width: 240px;
-  height: 240px;
-}
-.logo-text {
   width: 148px;
-  height: auto;
 }
 .about-content {
-  flex: 1;
   max-width: 693px;
 }
-.about-text {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.about-text p {
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
-
 @media (max-width: 992px) {
-  .about-inner {
-    gap: 40px;
-  }
-}
-@media (max-width: 768px) {
-  .about-inner {
+  .about {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-bottom: 60px;
   }
   .about-content {
     max-width: 100%;
@@ -350,43 +347,34 @@ p {
 }
 
 /* ===== FOOTER ===== */
-.site-footer {
-  padding: 60px 0;
-}
-.footer-inner {
+.footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  padding: 60px 20px;
+  font-size: 14px;
+  color: #000000;
 }
-.footer-contacts {
+.footer-contact {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-  font-size: 14px;
+  gap: 5px;
   max-width: 260px;
 }
 .footer-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  text-transform: uppercase;
+  gap: 10px;
 }
 .footer-socials {
   display: flex;
   gap: 48px;
-  align-items: center;
-}
-.social-link {
-  display: block;
-  width: 48px;
-  height: 48px;
 }
 .social-link img {
-  width: 100%;
-  height: 100%;
+  width: 48px;
+  height: 48px;
+  display: block;
 }
 .merged-social {
   position: relative;
@@ -395,28 +383,30 @@ p {
 }
 .social-circle {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .social-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 26px !important;
-  height: 20px !important;
+  width: 26px;
+  height: 20px;
 }
-
 @media (max-width: 768px) {
-  .footer-inner {
+  .footer {
     flex-direction: column;
     align-items: center;
-    text-align: center;
     gap: 40px;
+    text-align: center;
   }
-  .footer-contacts {
+  .footer-contact {
     align-items: center;
   }
   .footer-socials {
-    gap: 24px;
+    gap: 20px;
   }
 }
