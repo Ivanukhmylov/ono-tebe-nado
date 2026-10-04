@@ -494,7 +494,9 @@ a:hover {
     margin-top: 0;
   }
   .about-content {
-    max-width: 100%;
+    flex: 1;
+  max-width: 693px;
+  margin-top: 60px;
   }
 }
 
