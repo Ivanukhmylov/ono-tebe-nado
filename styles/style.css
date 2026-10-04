@@ -67,22 +67,14 @@ a:hover {
   opacity: 0.8;
 }
 
+.text-link {
+  display: inline-block;
+}
+
 .text-link:hover {
   background-color: #000000;
   color: #ffffff;
-}
-
-.underline {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
-}
-
-.underline-white {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
-  text-decoration-color: #ffffff;
+  opacity: 1;
 }
 
 /* ============================================================
@@ -154,6 +146,7 @@ a:hover {
 .address__address-text {
   font-size: 18px;
   line-height: 1.35;
+  margin: 0;
 }
 
 /* ============================================================
@@ -165,6 +158,7 @@ a:hover {
   background-image: url('../images/cover.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .overlay {
@@ -231,6 +225,7 @@ a:hover {
   line-height: 1.27;
   text-transform: uppercase;
   word-spacing: 18px;
+  margin: 0;
 }
 
 .bet-button {
@@ -295,6 +290,7 @@ a:hover {
   width: auto;
   height: 100%;
   padding: 50px 40px;
+  overflow: hidden;
 }
 
 .card_type_film {
@@ -361,6 +357,7 @@ a:hover {
 
 .about__column_text {
   grid-column: 2 / 4;
+  justify-self: start;
 }
 
 .about__logo {
@@ -404,6 +401,7 @@ a:hover {
 .footer {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 180px 50px 80px;
 }
 
@@ -418,6 +416,14 @@ a:hover {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.footer__menu-list-item {
+  margin: 0 0 8px;
+}
+
+.footer__menu-list-item:last-child {
+  margin-bottom: 0;
 }
 
 .footer__menu-link {
@@ -437,4 +443,8 @@ a:hover {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.footer__social-link {
+  display: block;
 }
