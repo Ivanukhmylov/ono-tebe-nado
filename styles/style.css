@@ -430,8 +430,8 @@ a:hover {
 .about {
   display: flex;
   align-items: flex-start;      /* логотип и заголовок по верхнему краю */
-  gap: 155px;
-  padding: 155px 50px 80px 47px;
+ gap: 76px;
+  padding: 35px 50px 80px 47px;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
@@ -467,6 +467,7 @@ a:hover {
 .about-content {
   flex: 1;
   max-width: 693px;
+  margin-top: 30px;
 }
 
 /* Заголовок без отступа сверху — вровень с логотипом */
