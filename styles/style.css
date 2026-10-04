@@ -425,13 +425,13 @@ a:hover {
 }
 
 /* ============================================================
-   ABOUT — логотип и заголовок выровнены по центру
+   ABOUT — логотип вровень с заголовком
    ============================================================ */
 .about {
   display: flex;
-  align-items: center;          /* заголовок по центру логотипа */
-  gap: 76px;
-  padding: 35px 50px 80px 47px;
+  align-items: flex-start;      /* логотип и заголовок по верхнему краю */
+  gap: 155px;
+  padding: 155px 50px 80px 47px;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
@@ -439,7 +439,7 @@ a:hover {
 
 .about-logo-wrapper {
   flex-shrink: 0;
-  margin-top: 0;
+  margin-top: 0;                /* без сдвига — вровень с текстом */
 }
 
 .merged-logo {
@@ -469,10 +469,9 @@ a:hover {
   max-width: 693px;
 }
 
-/* Заголовок без отступа сверху — центрируется по логотипу */
+/* Заголовок без отступа сверху — вровень с логотипом */
 .about-content .section-title {
   margin-top: 0;
-  margin-bottom: 0;
 }
 
 .about-text p {
