@@ -467,7 +467,7 @@ a:hover {
 .about-content {
   flex: 1;
   max-width: 693px;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 /* Заголовок без отступа сверху — вровень с логотипом */
