@@ -320,7 +320,7 @@ a:hover {
    LOTS
    ============================================================ */
 .lots {
-  padding: 60px 50px;
+  padding: 80px 50px;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
@@ -330,14 +330,14 @@ a:hover {
   font-size: 40px;
   font-weight: 700;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   text-transform: uppercase;
 }
 
 .lots-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 50px;
   margin-bottom: 0;
 }
 
@@ -391,7 +391,7 @@ a:hover {
 .more-link {
   font-size: 18px;
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 40px;
   margin-left: 40px;
 }
 
@@ -401,7 +401,7 @@ a:hover {
     gap: 30px;
   }
   .lots {
-    padding: 60px 30px;
+    padding: 80px 30px;
   }
   .more-link {
     margin-left: 30px;
@@ -417,7 +417,7 @@ a:hover {
     min-height: 400px;
   }
   .lots {
-    padding: 40px 20px;
+    padding: 60px 20px;
   }
   .more-link {
     margin-left: 20px;
@@ -425,13 +425,13 @@ a:hover {
 }
 
 /* ============================================================
-   ABOUT — логотип вровень с заголовком
+   ABOUT — логотип и заголовок выровнены по центру
    ============================================================ */
 .about {
   display: flex;
-  align-items: flex-start;      /* логотип и заголовок по верхнему краю */
-  gap: 100px;
-  padding: 80px 50px 60px 47px;
+  align-items: center;          /* заголовок по центру логотипа */
+  gap: 76px;
+  padding: 35px 50px 80px 47px;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
@@ -439,7 +439,7 @@ a:hover {
 
 .about-logo-wrapper {
   flex-shrink: 0;
-  margin-top: 0;                /* без сдвига — вровень с текстом */
+  margin-top: 0;
 }
 
 .merged-logo {
@@ -469,9 +469,10 @@ a:hover {
   max-width: 693px;
 }
 
-/* Заголовок без отступа сверху — вровень с логотипом */
+/* Заголовок без отступа сверху — центрируется по логотипу */
 .about-content .section-title {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .about-text p {
@@ -586,8 +587,8 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 26px;
-  height: 20px;
+  width: 26px !important;
+  height: 20px !important;
 }
 
 @media (max-width: 768px) {
