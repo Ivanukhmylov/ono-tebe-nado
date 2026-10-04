@@ -317,7 +317,7 @@ a:hover {
 }
 
 /* ============================================================
-   LOTS — gap между карточками 25px
+   LOTS
    ============================================================ */
 .lots {
   padding: 80px 50px;
@@ -337,7 +337,7 @@ a:hover {
 .lots-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  gap: 50px;
   margin-bottom: 0;
 }
 
@@ -398,7 +398,7 @@ a:hover {
 @media (max-width: 992px) {
   .lots-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 30px;
   }
   .lots {
     padding: 80px 30px;
@@ -411,7 +411,6 @@ a:hover {
 @media (max-width: 768px) {
   .lots-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
   .lot-card {
     height: auto;
@@ -426,112 +425,75 @@ a:hover {
 }
 
 /* ============================================================
-   ABOUT — контейнер 1052px, логотип 240×240, gap 72px
+   ABOUT — логотип вровень с заголовком
    ============================================================ */
-#section-about {
-  width: 100%;
+.about {
   display: flex;
-  justify-content: center;
-  padding: 50px 0;
+  align-items: flex-start;      /* логотип и заголовок по верхнему краю */
+  gap: 155px;
+  padding: 155px 50px 80px 47px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.about-container {
-  width: 100%;
-  max-width: 1052px;
-  padding-top: 35px;
-  padding-left: 47px;
-  padding-right: 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 72px;
-}
-
-.logo-column {
-  width: 240px;
+.about-logo-wrapper {
   flex-shrink: 0;
+  margin-top: 0;                /* без сдвига — вровень с текстом */
 }
 
-.logo-wrapper {
+.merged-logo {
   position: relative;
   width: 240px;
   height: 240px;
 }
 
-.logo-bg {
+.logo-circle {
   position: absolute;
   top: 0;
   left: 0;
-  width: 240px;
-  height: 240px;
-  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 
 .logo-text {
   position: absolute;
-  top: 64px;
-  left: 46.47px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 148px;
-  height: 114px;
-  z-index: 2;
 }
 
-.about-column {
-  flex-grow: 1;
+.about-content {
+  flex: 1;
   max-width: 693px;
-  margin-top: 98px;
 }
 
-.about-title {
-  font-size: 36px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0 0 100px 0;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
+/* Заголовок без отступа сверху — вровень с логотипом */
+.about-content .section-title {
+  margin-top: 0;
 }
 
-.description-block {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.description-text {
+.about-text p {
   font-size: 18px;
   line-height: 1.6;
-  margin: 0;
-  color: #000000;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 992px) {
-  .about-container {
-    padding-left: 20px;
-    gap: 40px;
-  }
-  .about-column {
-    margin-top: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-container {
+  .about {
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
-  }
-  .about-column {
-    margin-top: 0;
-    width: 100%;
-  }
-  .about-title {
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 28px;
+    gap: 40px;
+    padding: 60px 20px;
   }
-  .description-text {
-    font-size: 16px;
+  .about-logo-wrapper {
+    margin-top: 0;
+  }
+  .about-content {
+    max-width: 100%;
   }
 }
 
